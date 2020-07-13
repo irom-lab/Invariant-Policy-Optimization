@@ -93,6 +93,10 @@ def main(raw_args=None):
 
     args.mem = args.recurrence > 1
 
+    # Check PyTorch version
+    if (torch.__version__ != '1.2.0'):
+        raise ValueError("PyTorch version must be 1.2.0 (see README). Your version is {}.".format(torch.__version__))
+
     if args.mem:
         raise ValueError("Policies with memory not supported.")
 
