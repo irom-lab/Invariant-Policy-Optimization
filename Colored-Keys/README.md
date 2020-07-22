@@ -15,7 +15,7 @@ Torch-AC: https://github.com/lcswillems/torch-ac
 Then, do the following:
 
 ```
-cd ExtremeGeneralization
+cd Colored-Keys
 pip3 install -e .
 ```
 
@@ -42,25 +42,25 @@ This will run either IPO or PPO on some number of seeds (you can set the number 
 If you'd like to visualize a trained IPO policy, run the following from the rl-starter-files folder. This will visualize the policy corresponding to seed 0 on environments with Grey keys. You can change the --env argument to run the policy on a different domain (e.g., MiniGrid-ColoredKeysRed-v0).
 
 ```
-python3 scripts/visualize.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysIPO-0 --ipo_model
+python3 visualize.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysIPO-0 --ipo_model
 ```
 
 To visualize a trained PPO model, run the following:
 
 ```
-python3 scripts/visualize.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysPPO-0 
+python3 visualize.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysPPO-0 
 ```
 
 If you'd like to evaluate a trained IPO policy independently of run_comparisons.py (after you've executed run_comparisons.py once), you can execute the following from the rl-starter-files folder. 
 
 ```
-python3 scripts/evaluate.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysIPO-0 --ipo_model
+python3 evaluate.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysIPO-0 --ipo_model
 ``` 
 
 Similarly, you can evaluate a PPO model by running:
 
 ```
-python3 scripts/evaluate.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysPPO-0
+python3 evaluate.py --env MiniGrid-ColoredKeysGrey-v0 --model MiniGrid-ColoredKeysPPO-0
 ``` 
 
 
